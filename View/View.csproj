@@ -1,0 +1,92 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="addNewUser.png" />
+    <None Remove="adminpage.jpg" />
+    <None Remove="alochucongan.jpg" />
+    <None Remove="book-add-regular-24.png" />
+    <None Remove="email.png" />
+    <None Remove="facebook-logo-24.png" />
+    <None Remove="github-logo-24.png" />
+    <None Remove="hotel.png" />
+    <None Remove="lock.png" />
+    <None Remove="logoGG.png" />
+    <None Remove="meme1.jpeg" />
+    <None Remove="meme_info.jpg" />
+    <None Remove="memme.jpg" />
+    <None Remove="memme2.jpg" />
+    <None Remove="menu.png" />
+    <None Remove="phone-regular-24.png" />
+    <None Remove="power-off-regular-24.png" />
+    <None Remove="user-regular-24.png" />
+    <None Remove="welcome.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessObject\BusinessObject.csproj" />
+    <ProjectReference Include="..\Services\Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="addNewUser.png" />
+    <Resource Include="adminpage.jpg" />
+    <Resource Include="alochucongan.jpg" />
+    <Resource Include="book-add-regular-24.png" />
+    <Resource Include="email.png" />
+    <Resource Include="facebook-logo-24.png" />
+    <Resource Include="github-logo-24.png" />
+    <Resource Include="hotel.png" />
+    <Resource Include="lock.png" />
+    <Resource Include="logoGG.png" />
+    <Resource Include="meme1.jpeg" />
+    <Resource Include="meme_info.jpg" />
+    <Resource Include="memme.jpg" />
+    <Resource Include="memme2.jpg" />
+    <Resource Include="menu.png" />
+    <Resource Include="phone-regular-24.png" />
+    <Resource Include="power-off-regular-24.png" />
+    <Resource Include="user-regular-24.png" />
+    <Resource Include="welcome.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="AdminManagerBookingResevationPage.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="AdminViewDetailUpdatePage.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+    <Page Update="BookingCustomerPage.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="HomeAdmin.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="InforPage.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="ManagerRoomPage.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+
+</Project>

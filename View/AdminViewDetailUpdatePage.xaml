@@ -1,0 +1,70 @@
+﻿<Page x:Class="View.AdminViewDetailUpdatePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:View"
+      mc:Ignorable="d" 
+      d:DesignHeight="733" d:DesignWidth="951"
+      Title="AdminViewDetailUpdatePage"
+      Background="Transparent"
+      Loaded="Page_Loaded"
+      >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Background="#FFFFFF" CornerRadius="10,0,0,10" Margin="2,0,0,0">
+            <StackPanel>
+                <Label Margin="0,19,0,0"></Label>
+                <Image Width="645" Height="171" Margin="0,1,0,6" Source="/meme1.jpeg"></Image>
+                <Label Content="View Detail" Margin="0,-15,0,28" FontFamily="Segoe Print" FontSize="36" HorizontalAlignment="Center"/>
+                <Label Content="Full Name:"  Width="136" HorizontalAlignment="Left" FontSize="18" FontFamily="Segoe Print" Margin="79,0,3,0"/>
+                <TextBox x:Name="txt_fullName"  Margin="202,-44,-1,10" Width="136" HorizontalAlignment="Left" FontSize="18" FontFamily="Segoe Print"/>
+                <Label Content="Phone:"  Width="136" HorizontalAlignment="Left" FontSize="18" FontFamily="Segoe Print" Margin="513,-50,3,0"/>
+                <TextBox x:Name="txt_phone"   Width="145" HorizontalAlignment="Left" FontSize="18" FontFamily="Segoe Print" Margin="601,-55,0,0" Height="34"/>
+                <Label Content="Room Number:" Margin="82,10,10,10" Width="150" HorizontalAlignment="Left" FontSize="18" FontFamily="Segoe Print"/>
+                <Label Width="0" x:Name="txt_bookingResrvation"></Label>
+                <Label x:Name="txt_fakeRoomNumber" Height="39" Width="92" Margin="250,-60,0,0"  Content="" FontFamily="Segoe Print" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+                <Label x:Name="txt_fakeRoomNumberId"  Width="0" Margin="250,-60,0,0"  Content="" FontFamily="Segoe Print" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+                <Label Content="Price Per Day:" Margin="512,-52,10,10" Width="148" HorizontalAlignment="Left" FontSize="18" FontFamily="Segoe Print"/>
+                <Label x:Name="txt_priceperday" Content="" Margin="664,-52,11,10" Width="138" HorizontalAlignment="Left" FontSize="18" FontFamily="Segoe Print"/>
+                <Label Content="Price Per Day:" Margin="512,-52,10,10" Width="148" HorizontalAlignment="Left" FontSize="18" FontFamily="Segoe Print"/>
+                <Label Content="Start Date:" Width="129" HorizontalAlignment="Left" FontSize="18" FontFamily="Segoe Print" Margin="81,2,0,0"/>
+                <Label Content="End Date:" Width="148" HorizontalAlignment="Left" FontSize="18" FontFamily="Segoe Print" Margin="513,-42,0,0"/>
+                <Label x:Name="txt_startday" Width="186"  Margin="-301,-41,0,0" Height="43" FontSize="18" FontFamily="Segoe Print" ></Label>
+                <Label x:Name="txt_Endday" Width="186"  Margin="562,-41,0,0" Height="42" FontSize="18" FontFamily="Segoe Print"></Label>
+                <Label Content="Room Detail Description" Margin="331,10,10,10" Width="245" HorizontalAlignment="Left" FontSize="18" FontFamily="Segoe Print"/>
+                <Label x:Name="txt_roomDetail" Content="" Margin="160,10,10,10" Width="637" HorizontalAlignment="Left" FontSize="14" FontFamily="Segoe Print"/>
+                <Label Content="Total Price" Margin="92,10,10,10" Width="163" HorizontalAlignment="Left" FontSize="22" FontFamily="Segoe Print"/>
+                <Label x:Name="txt_totalPrice" Content="" Margin="282,-51,10,10" Width="516" HorizontalAlignment="Left" FontSize="18" FontFamily="Segoe Print"/>
+
+
+
+
+
+
+                <Button x:Name="btn_back" Height="48" Content="Back" FontSize="16" Width="157" FontFamily="Segoe Print" Click="btn_back_Click" Background="#FF0AD3EB" Foreground="#FFFEFEFE" Margin="239,8,0,0">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="btn_update" Height="48" Content="Update" FontSize="16" Width="156" FontFamily="Segoe Print" Click="btn_update_Click" Background="#FF0AD3EB" Foreground="#FFFEFEFE" Margin="-297,-47,0,0" BorderThickness="1,0,1,1">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

@@ -1,0 +1,17 @@
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\bin\Debug\net8.0\Repositories.deps.json
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\bin\Debug\net8.0\Repositories.dll
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\bin\Debug\net8.0\Repositories.pdb
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\bin\Debug\net8.0\BusinessObject.dll
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\bin\Debug\net8.0\DataAccessLayer.dll
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\bin\Debug\net8.0\BusinessObject.pdb
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\bin\Debug\net8.0\DataAccessLayer.pdb
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\obj\Debug\net8.0\Reposito.787EC4B2.Up2Date
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\obj\Debug\net8.0\Repositories.dll
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\obj\Debug\net8.0\refint\Repositories.dll
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\obj\Debug\net8.0\Repositories.pdb
+D:\FPT_tutorial\NPR\tolearn\Assingment\Repositories\obj\Debug\net8.0\ref\Repositories.dll

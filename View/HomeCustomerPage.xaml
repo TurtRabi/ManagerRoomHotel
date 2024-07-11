@@ -1,0 +1,153 @@
+﻿<Page x:Class="View.HomeCustomerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:View"
+      mc:Ignorable="d" 
+      d:DesignHeight="733" d:DesignWidth="951"
+      Title="HomeCustomerPage"
+      Background="Transparent"
+      Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#FF0AD3EB" Margin="0,-2,0,-10">
+            <TextBlock Text="Hotel Happy" FontSize="36" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" FontWeight="Bold" FontFamily="Segoe Print"/>
+        </Border>
+
+        <Border Grid.Row="1" Background="White">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="58*"/>
+                    <ColumnDefinition Width="893*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75*"></RowDefinition>
+                    <RowDefinition Height="614*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" Background="#FF0AD3EB" Margin="111,29,0,0" Grid.RowSpan="2" BorderThickness="1" CornerRadius="10" Grid.Column="1" Height="43" VerticalAlignment="Top" HorizontalAlignment="Left" Width="629">
+                    <StackPanel>
+                        <Label Width="173" FontSize="20" FontWeight="Bold" Content="Find your Hotel" FontFamily="Segoe Print" Margin="0,-36,0,0" Foreground="Black"/>
+                        <Border BorderThickness="1" BorderBrush="#acb0af" CornerRadius="5" Height="33" Width="79" Margin="-499,-5,0,0">
+                            <Grid Margin="7 9">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="19*"/>
+                                    <ColumnDefinition Width="24*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock x:Name="text_minPrice" MouseDown="text_minPrice_MouseDown_1" Text="Min Price" Style="{StaticResource textHint1}" Grid.Column="1" Grid.ColumnSpan="2" Margin="-1,0,0,0"/>
+                                <TextBox x:Name="txt_minPrice" BorderThickness="0" TextChanged="txt_minPrice_TextChanged" Style="{StaticResource textbox1}" Grid.Column="1" Grid.ColumnSpan="2" Margin="-3,0,0,0"/>
+                            </Grid>
+                        </Border>
+
+                        <Label Margin="-404,-29,0,0" Width="14">-</Label>
+
+                        <Border BorderThickness="1" BorderBrush="#acb0af" CornerRadius="5" Height="33" Width="79" Margin="-499,-34,-194,0">
+                            <Grid Margin="7 9">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="19*"/>
+                                    <ColumnDefinition Width="24*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock x:Name="text_maxPrice" MouseDown="text_maxPrice_MouseDown" Text="MaxPrice" Style="{StaticResource textHint1}" Grid.Column="1" Grid.ColumnSpan="2" Margin="-1,0,0,0"/>
+                                <TextBox x:Name="txt_maxPrice" BorderThickness="0" TextChanged="txt_maxPrice_TextChanged" Style="{StaticResource textbox1}" Grid.Column="1" Grid.ColumnSpan="2" Margin="-2,0,0,0"/>
+                            </Grid>
+                        </Border>
+
+                        <ComboBox x:Name="combobox_fillter" Width="210" Height="32" Margin="92,-35,0,0" Background="Transparent" Text="name" SelectionChanged="combobox_fillter_SelectionChanged" BorderThickness="1,1,1,1">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding RoomTypeName}" Margin="5"/>
+                                        <TextBlock  Width="0" Text="{Binding RoomTypeId}" Margin="0"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <TextBlock Width="186" Height="24" Margin="0,-32,-71,0" Text="     Room Type" MouseDown="TextBlock_MouseDown" x:Name="text_change" FontFamily="Segoe Print"></TextBlock>
+                        <Button x:Name="btn_search" Height="32" Width="82" Margin="0,-35,-488,0" Content="Search" FontSize="14" FontFamily="Segoe Print" Click="btn_search_Click" Background="#FFF1F1F1" Foreground="#FF0A0B0B">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+                </Border>
+                <Border Background="#FFFF" Margin="0,4,0,3" Grid.ColumnSpan="2" Grid.Row="1">
+                    <ListView x:Name="ListRoomtype" HorizontalAlignment="Center" Height="551" Grid.Row="1" VerticalAlignment="Center" Width="845" SelectionChanged="ListRoomtype_SelectionChanged" Margin="0,28,0,0">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Room Type" Width="169" DisplayMemberBinding="{Binding RoomType.RoomTypeName}"/>
+                                <GridViewColumn Header="Room Id" Width="0" DisplayMemberBinding="{Binding RoomId}" x:Name="roomId"/>
+
+                                <GridViewColumn Header="Room Number" Width="169" DisplayMemberBinding="{Binding RoomNumber}"/>
+                                <GridViewColumn Header="Status" Width="169">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <CheckBox IsEnabled="False" IsChecked="{Binding RoomStatus, Mode=TwoWay}">
+                                                <CheckBox.Style>
+                                                    <Style TargetType="CheckBox">
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding RoomStatus}" Value="1">
+                                                                <Setter Property="IsChecked" Value="True"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding RoomStatus}" Value="0">
+                                                                <Setter Property="IsChecked" Value="False"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </CheckBox.Style>
+                                            </CheckBox>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Price Per Day" Width="169" DisplayMemberBinding="{Binding RoomPricePerDay}"/>
+                                <GridViewColumn Header="Action" Width="160">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                <Button Content="View" Click="Button_Click_1" Margin="5">
+                                                    <Button.Template>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border CornerRadius="3" Background="White" BorderBrush="#0AD3EB" BorderThickness="1">
+                                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Button.Template>
+                                                </Button>
+
+                                                <Button Content="Booking" Click="Button_Click" Margin="5">
+                                                    <Button.Template>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border CornerRadius="3" Background="White" BorderBrush="#0AD3EB" BorderThickness="1">
+                                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Button.Template>
+                                                </Button>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                </Border>
+            </Grid>
+
+        </Border>
+
+
+    </Grid>
+</Page>

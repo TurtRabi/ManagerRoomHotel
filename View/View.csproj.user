@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AddNewUserPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddRoomPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminBookingForCustomerPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminManagerBookingResevationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminManagerCustomerPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminViewDetailUpdatePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminViewSort.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BookingCustomerPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BookingHistoryPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CustomerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HomeAdmin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HomeCustomerPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InforPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ManagerRoomPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RegisterWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ReportPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewAndUpdateRoomPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewDetailPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddNewUserPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddRoomPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminBookingForCustomerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminManagerBookingResevationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminManagerCustomerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminViewDetailUpdatePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminViewSort.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BookingCustomerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BookingHistoryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomerWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomeAdmin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomeCustomerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InforPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ManagerRoomPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RegisterWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReportPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewAndUpdateRoomPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewDetailPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

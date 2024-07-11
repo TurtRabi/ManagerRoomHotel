@@ -1,0 +1,75 @@
+﻿<Page x:Class="View.HomeAdmin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:View"
+      mc:Ignorable="d" 
+      d:DesignHeight="733" d:DesignWidth="940"
+      Title="HomeAdmin"
+      Background="Transparent"
+      Loaded="Page_Loaded"
+      >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="#FFFF" CornerRadius="10,0,0,10" Margin="2,0,0,0">
+            <StackPanel HorizontalAlignment="Left" Width="949">
+                <Image Width="645" Height="205" Margin="0,11,0,6" Source="/adminpage.jpg"></Image>
+                <Label Content="Home Admin" Margin="0,30,0,28" FontFamily="Segoe Print" FontSize="40" HorizontalAlignment="Center" FontWeight="Bold" Width="340" Height="104" HorizontalContentAlignment="Center"/>
+                
+                <Canvas Height="113" Width="764" Background="Transparent" Margin="47,-8,0,-25">
+                    <Label Height="74" Width="764" Content="Total Revenue" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalContentAlignment="Center" FontFamily="Segoe Print" Canvas.Top="-17">
+                        <Label.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleY="0"/>
+                                <RotateTransform/>
+                                <TranslateTransform Y="0"/>
+                            </TransformGroup>
+                        </Label.RenderTransform>
+                    </Label>
+                    <Label x:Name="txt_totalRevenue" Height="56" Width="764" HorizontalAlignment="Left" Canvas.Top="57" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontSize="18" FontFamily="Segoe Print" Margin="0,-2,0,0"/>
+                </Canvas>
+
+                <Canvas Height="113" Width="365" Background="Transparent" Margin="-391,82,0,0">
+                    <Label Height="75" Width="366" Content="Revenue In Day" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalContentAlignment="Center" FontFamily="Segoe Print" Canvas.Top="-7" Margin="0,-11,0,0">
+                        <Label.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleY="0"/>
+                                <RotateTransform/>
+                                <TranslateTransform Y="0"/>
+                            </TransformGroup>
+                        </Label.RenderTransform>
+                    </Label>
+                    <Label x:Name="txt_revenueInDay" Height="56" Width="366" HorizontalAlignment="Left" Canvas.Top="57" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Segoe Print" FontSize="18"/>
+                </Canvas>
+
+                <Canvas Height="113" Width="365" Background="Transparent" Margin="361,-112,0,0" RenderTransformOrigin="0.5,0.5">
+                    <Canvas.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.106"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Canvas.RenderTransform>
+                    <Label Height="74" Width="366" Content="Number Booking" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalContentAlignment="Center" FontFamily="Segoe Print" Canvas.Top="-11" BorderThickness="0,3,0,0" Margin="0,-5,0,0">
+                        <Label.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleY="0"/>
+                                <RotateTransform/>
+                                <TranslateTransform Y="0"/>
+                            </TransformGroup>
+                        </Label.RenderTransform>
+                    </Label>
+                    <Label x:Name="txt_NumberBooking" Height="56" Width="366" HorizontalAlignment="Left" Canvas.Top="57" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Segoe Print" FontSize="18"/>
+                </Canvas>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

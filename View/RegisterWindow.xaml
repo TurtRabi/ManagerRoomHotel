@@ -1,0 +1,204 @@
+﻿<Window x:Class="View.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:View"
+        mc:Ignorable="d"
+        Title="RegisterWindow" Height="700" Width="800"
+        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Background="#FF0AD3EB" CornerRadius="10,0,0,10">
+            <StackPanel >
+                <Label Content="Sign In" HorizontalAlignment="Center" Height="69" Margin="0,189,0,39" Width="320" FontWeight="Bold" FontSize="36" FontFamily="Segoe Print" HorizontalContentAlignment="Center" Foreground="#FFF6F6F6" />
+                <Label Height="66" Width="318" Margin="0 0 0 20">
+                    <TextBlock Text="Enter Your personal info and create&#xA;new account to connect us"
+                               TextAlignment="Center"
+                               FontSize="16"
+                               Foreground="#FFF0E6E6" Height="66" Width="318" FontFamily="Segoe Print"/>
+                </Label>
+                <Button x:Name="btn_SignIn" Height="46" Width="147" Margin="0,47,0,0" Content="Sign In" FontSize="14" FontFamily="Segoe Print" Click="btn_SignIn_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+
+
+        </Border>
+        <Border Grid.Column="1" Background="#FFFBFBFB" CornerRadius="0,10,10,0">
+            <StackPanel>
+                <Label Content="Sign up to App" Height="74" Margin="0 30 0 0" FontSize="36" FontFamily="Segoe Print" FontWeight="Bold" HorizontalContentAlignment="Center" Foreground="#FF0AD3EB"/>
+                <Grid HorizontalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" SharedSizeGroup="Buttons"/>
+                        <ColumnDefinition Width="50" SharedSizeGroup="Buttons" />
+                        <ColumnDefinition Width="50" SharedSizeGroup="Buttons"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Height="40" Margin="5,20,5,0" FontSize="14" FontFamily="Segoe Print" Click="Button_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="50" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                        <Image Source="/logoGG.png" Stretch="Uniform" Width="20"/>
+                    </Button>
+
+                    <Button Grid.Column="1" Width="40" Margin="5,20,5,0" FontSize="14" FontFamily="Segoe Print" Click="Button_Click_1">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="50" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                        <Image Source="/facebook-logo-24.png" Stretch="Uniform" Width="20"/>
+                    </Button>
+
+                    <Button Grid.Column="2" Height="40" Width="40" Margin="0,20,0,0" FontSize="14" FontFamily="Segoe Print" Click="Button_Click_2">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="50" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                        <Image Source="/github-logo-24.png" Stretch="Uniform" Width="20"/>
+                    </Button>
+                </Grid>
+
+                <Label HorizontalContentAlignment="Center" Margin="0 20 0 20" Foreground="#FFAEA8A8">or use your email info:</Label>
+                <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="5">
+                    <Grid Margin="7 9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="/user-regular-24.png" Height="20"></Image>
+                        <TextBlock x:Name="textFullName" MouseDown="textFullName_MouseDown" Text="Full Name" Style="{StaticResource textHint}"></TextBlock>
+                        <TextBox x:Name="txtFullName" TextChanged="txtFullName_TextChanged" Style="{StaticResource textbox}" BorderThickness="0" Background="Transparent"/>
+                    </Grid>
+                </Border>
+
+                <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="5">
+                    <Grid Margin="7 9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="/email.png" Height="20"></Image>
+                        <TextBlock x:Name="textEmail" MouseDown="textEmail_MouseDown" Text="Email" Style="{StaticResource textHint}"></TextBlock>
+                        <TextBox x:Name="txtEmail" TextChanged="txtEmail_TextChanged" Style="{StaticResource textbox}" BorderThickness="0" Background="Transparent"/>
+                    </Grid>
+                </Border>
+
+                <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="5">
+                    <Grid Margin="7 9">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="13*"/>
+                            <RowDefinition Height="7*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="/phone-regular-24.png" Height="20" Margin="0,0,0,1" Grid.RowSpan="2"></Image>
+                        <TextBlock x:Name="textPhone" MouseDown="textPhone_MouseDown" Text="Number Phone" Style="{StaticResource textHint}" Grid.Column="1" Grid.RowSpan="2"></TextBlock>
+                        <TextBox x:Name="txtPhone" BorderThickness="0" TextChanged="txtPhone_TextChanged" Style="{StaticResource textbox}" Grid.Column="1" Grid.RowSpan="2"/>
+                    </Grid>
+                </Border>
+
+                <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="5">
+                    <Grid Margin="7 9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="/lock.png" Height="20"></Image>
+                        <TextBlock x:Name="textPassword" MouseDown="textPassword_MouseDown" Text="Password" Style="{StaticResource textHint}"></TextBlock>
+                        <PasswordBox x:Name="txtPassword" BorderThickness="0" PasswordChanged="txtPassword_PasswordChanged" Style="{StaticResource textbox}"/>
+                    </Grid>
+                </Border>
+
+                <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="5">
+                    <Grid Margin="7 9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="/lock.png" Height="20"></Image>
+                        <TextBlock x:Name="textRePassword" MouseDown="textRePassword_MouseDown" Text="Re-Password" Style="{StaticResource textHint}" Grid.Column="1" Margin="10,1,0,-1"></TextBlock>
+                        <PasswordBox x:Name="txtRePassword" BorderThickness="0" PasswordChanged="txtRePassword_PasswordChanged" Style="{StaticResource textbox}"/>
+                    </Grid>
+                </Border>
+
+                <DatePicker x:Name="txtbirtDay" Height="39" Width="336">
+                    <DatePicker.Template>
+                        <ControlTemplate TargetType="DatePicker">
+                            <Border CornerRadius="5" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="5">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <DatePickerTextBox x:Name="PART_TextBox" Grid.Column="0" Background="Transparent" Focusable="False" />
+                                    <Button x:Name="PART_Button" Grid.Column="1" Content="▼" Focusable="False" Background="Transparent" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" />
+                                    <Popup x:Name="PART_Popup" Placement="Bottom" StaysOpen="False" IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}">
+                                        <Border CornerRadius="5" Background="White" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                            <Calendar x:Name="PART_Calendar"/>
+                                        </Border>
+                                    </Popup>
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </DatePicker.Template>
+                </DatePicker>
+
+                <Button x:Name="btn_SignUp" Height="39" Width="155" Margin="0,20,0,0" Content="Sign Up" FontSize="14" FontFamily="Segoe Print" Click="btn_SignUp_Click" Background="#FF0AD3EB" Foreground="#FFFEFEFE">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+
+                <Button Grid.Column="0" Height="31" Width="32" FontSize="14" FontFamily="Segoe Print" Click="Button_Click_5" Margin="0,45,-420,0">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="50" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Image Source="/power-off-regular-24.png" Stretch="Uniform" Width="20"/>
+                </Button>
+            </StackPanel>
+
+        </Border>
+
+
+
+    </Grid>
+</Window>

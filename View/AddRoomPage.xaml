@@ -1,0 +1,70 @@
+﻿<Page x:Class="View.AddRoomPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:View"
+      mc:Ignorable="d" 
+      d:DesignHeight="733" d:DesignWidth="951"
+      Title="AddRoomPage"
+      Background="Transparent"
+      Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="1" Background="#FFFBFBFB" CornerRadius="0,10,10,0">
+            <StackPanel>
+                <Image Width="645" Height="171" Margin="0,25,0,6" Source="/memme2.jpg"></Image>
+                <Label Content="Add New Room" Height="74" Margin="0,-13,0,30" FontSize="36" FontFamily="Segoe Print" FontWeight="Bold" HorizontalContentAlignment="Center" Foreground="#FF0AD3EB"/>
+                <Label Content="Room Number" Height="31" Width="113" Margin="-624,0,0,0" FontFamily="Segoe Print" FontSize="14"></Label>
+                <TextBox x:Name="txt_roomNumber" Width="156" Height="35" Margin="-351,-33,0,0"></TextBox>
+                <Label Content="Max Capacity" Width="112" Margin="76,-33,0,0" FontFamily="Segoe Print" FontSize="14"></Label>
+                <TextBox x:Name="txt_RoomMaxCapacity" Width="162" Margin="354,-39,0,0" Height="32"></TextBox>
+                <Label Content="Detail Description" Width="401" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Height="33" Margin="0,18,0,0" FontFamily="Segoe Print" FontSize="14"></Label>
+
+                <TextBox x:Name="txt_RoomDetailDescription" Width="666" Height="66" Margin="0,6,0,0"></TextBox>
+
+                <Label Content="Price Per Day" Width="124" Margin="-603,24,0,0" FontFamily="Segoe Print" FontSize="14"></Label>
+                <TextBox x:Name="txt_pricePerDay" Width="207" Margin="-244,-32,0,0" Height="36"></TextBox>
+                <CheckBox x:Name="txt_roomStatus" Content="Room Status" IsChecked="True" Width="139" Height="32" Margin="220,-28,0,0"></CheckBox>
+                <Label  FontFamily="Segoe Print" FontSize="14" Content="Room Type" Width="105" Margin="-496,31,0,0" Height="34"></Label>
+                <ComboBox x:Name="listRoomType"  Background="Transparent" Text="name" SelectionChanged="combobox_fillter_SelectionChanged" BorderThickness="1,1,1,1" Width="283" Margin="-104,-34,0,0" Height="38">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding RoomTypeName}" Margin="5"/>
+                                <TextBlock  Width="0" Text="{Binding RoomTypeId}" Margin="0"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <Button x:Name="btn_AddRoom" Height="39" Width="155" Margin="-208,52,0,0" Content="Add Room" FontSize="14" FontFamily="Segoe Print" Click="btn_AddRoom_Click" Background="#FF0AD3EB" Foreground="#FFFEFEFE">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button x:Name="btn_back" Height="39" Width="155" Margin="303,-39,0,0" Content="Back" FontSize="14" FontFamily="Segoe Print" Click="btn_back_Click" Background="#FF0AD3EB" Foreground="#FFFEFEFE">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+
+</Page>
