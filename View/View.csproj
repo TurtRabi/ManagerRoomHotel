@@ -46,28 +46,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="addNewUser.png" />
-    <Resource Include="adminpage.jpg" />
-    <Resource Include="alochucongan.jpg" />
-    <Resource Include="book-add-regular-24.png" />
-    <Resource Include="email.png" />
-    <Resource Include="facebook-logo-24.png" />
-    <Resource Include="github-logo-24.png" />
-    <Resource Include="hotel.png" />
-    <Resource Include="lock.png" />
-    <Resource Include="logoGG.png" />
-    <Resource Include="meme1.jpeg" />
-    <Resource Include="meme_info.jpg" />
-    <Resource Include="memme.jpg" />
-    <Resource Include="memme2.jpg" />
-    <Resource Include="menu.png" />
-    <Resource Include="phone-regular-24.png" />
-    <Resource Include="power-off-regular-24.png" />
-    <Resource Include="user-regular-24.png" />
-    <Resource Include="welcome.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Page Update="AdminManagerBookingResevationPage.xaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Generator>MSBuild:Compile</Generator>

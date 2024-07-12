@@ -122,3 +122,4 @@ D:\FPT_tutorial\NPR\tolearn\Assingment\View\obj\Debug\net8.0-windows\AddRoomPage
 D:\FPT_tutorial\NPR\tolearn\Assingment\View\obj\Debug\net8.0-windows\AddRoomPage.baml
 D:\FPT_tutorial\NPR\tolearn\Assingment\View\obj\Debug\net8.0-windows\AdminBookingForCustomerPage.g.cs
 D:\FPT_tutorial\NPR\tolearn\Assingment\View\obj\Debug\net8.0-windows\AdminBookingForCustomerPage.baml
+D:\FPT_tutorial\NPR\tolearn\Assingment\View\obj\Debug\net8.0-windows\View.sourcelink.json
